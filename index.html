@@ -4,16 +4,39 @@
     <meta charset="UTF-8"> <!-- Encodage des caractères pour supporter les accents et symboles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adaptation pour mobile -->
     <title>Mon Portfolio - CIMEN</title> <!-- Titre de la page -->
-    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS externe -->
-</head>
+    <!-- CSS de Bootstrap (chargé depuis un CDN, c'est-à-dire un serveur externe) -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IE:wght@100..400&family=Saira+Stencil:ital,wght@0,100..900;1,100..900&family=Strichpunkt+Sans:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Ton fichier CSS, chargé APRÈS Bootstrap pour pouvoir le surcharger -->
+
+  </head>
 <body>
-    <!-- En-tête de la page -->
+    <!-- En-tête de la page : navbar Bootstrap -->
+    <!-- navbar-expand-md = le menu s'affiche en entier à partir de "medium" (768px),
+         et se replie dans le burger en dessous -->
     <header class="header container">
-        <h1>CIMEN</h1> <!-- Titre principal -->
-        <nav class="menu"> <!-- Utilisation de la balise <nav> pour le menu de navigation -->
-            <h2><a href="#travail">Mon travail</a></h2> <!-- Lien vers la section "Mon travail" -->
-            <h2><a href="#contact">Demande de renseignement</a></h2> <!-- Lien vers la section "Contact" -->
-            <h2><a href="#apropos">À propos</a></h2> <!-- Lien vers la section "À propos" -->
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div class="container-fluid">
+                <!-- Le titre du site sert de "marque" (brand) -->
+                <a class="navbar-brand" href="#"><h1>CIMEN</h1></a>
+
+                <!-- Le bouton burger : visible uniquement quand le menu est replié.
+                     data-bs-toggle et data-bs-target disent à Bootstrap quel bloc ouvrir/fermer -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Ouvrir le menu">
+                    <span class="navbar-toggler-icon"></span> <!-- Les 3 barres du burger -->
+                </button>
+
+                <!-- Le menu repliable. L'id "menuPrincipal" correspond au data-bs-target ci-dessus -->
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto"> <!-- ms-auto pousse le menu vers la droite -->
+                        <li class="nav-item"><a class="nav-link" href="#travail">Mon travail</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Demande de renseignement</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://benoit-korben.github.io/EFAP-PROJET/index2.html">À propos</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -63,5 +86,9 @@
             <button type="submit" class="bouton-submit">Envoyer</button> <!-- Bouton pour soumettre le formulaire -->
         </form>
     </section>
+
+    <!-- JavaScript de Bootstrap : indispensable pour que le burger s'ouvre et se ferme.
+         C'est du code fourni par Bootstrap, tu n'as rien à écrire toi-même. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

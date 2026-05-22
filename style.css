@@ -61,6 +61,7 @@ body {
     text-decoration: none; /* Supprime le soulignement des liens */
     color: #333; /* Couleur des liens */
     font-weight: bold; /* Texte en gras */
+    font-family: "Strichpunkt Sans", sans-serif;
 }
 
 /* Style des liens au survol */
@@ -155,4 +156,95 @@ hr {
 /* Style du bouton au survol */
 .bouton-submit:hover {
     background-color: #0056b3; /* Couleur de fond plus foncée au survol */
+}
+
+/* ===================================================== */
+/* RESPONSIVE - Ajustements pour tablettes et mobiles    */
+/* Les media queries n'écrasent que ce qui est précisé   */
+/* ici. Tout le reste du style ci-dessus est conservé.   */
+/* ===================================================== */
+
+/* --- Tablettes et petits écrans : moins de 768px --- */
+@media (max-width: 768px) {
+
+    /* L'en-tête passe en colonne : le titre au-dessus, le menu en dessous */
+    .header {
+        flex-direction: column; /* Empile les éléments verticalement */
+        gap: 15px; /* Espace entre le titre et le menu */
+    }
+
+    /* Le menu se centre quand il passe sous le titre */
+    .menu {
+        gap: 20px; /* Réduit légèrement l'espace entre les liens */
+    }
+
+    /* La galerie passe en colonne : les images l'une sous l'autre */
+    .gallery {
+        flex-direction: column; /* Empile les images verticalement */
+        align-items: center; /* Centre les images empilées */
+    }
+
+    /* Les images de la galerie s'adaptent à la largeur de l'écran */
+    .gallery img {
+        width: 100%; /* Remplace le 300px fixe par une largeur fluide */
+        max-width: 350px; /* Mais sans devenir trop grandes sur tablette */
+        height: auto; /* Conserve les proportions */
+    }
+}
+
+/* --- Téléphones : moins de 480px --- */
+@media (max-width: 480px) {
+
+    /* Sur petit écran, l'image suit la largeur du conteneur, jamais plus.
+       box-sizing évite que le padding du conteneur fasse déborder l'image. */
+    .gallery img {
+        width: 100%; /* Toute la largeur disponible */
+        max-width: 100%; /* Ne dépasse jamais l'écran, même sur très petit téléphone */
+    }
+
+    /* Le conteneur prend plus de place sur un petit écran */
+    .container {
+        width: 100%; /* Utilise toute la largeur disponible */
+        padding: 15px; /* Réduit l'espacement intérieur */
+    }
+
+    /* Réduit un peu le padding des groupes de champs du formulaire */
+    .form-group {
+        padding: 10px; /* Au lieu de 20px, pour gagner de la place */
+    }
+
+    /* Le champ de saisie prend presque toute la largeur disponible */
+    .form-group input {
+        width: 100%; /* Largeur complète sur mobile */
+        box-sizing: border-box; /* Inclut le padding dans la largeur (évite le débordement) */
+    }
+
+    /* Le bouton s'aligne avec les champs */
+    .bouton-submit {
+        margin-left: 0; /* Supprime le décalage à gauche sur mobile */
+        width: 100%; /* Largeur complète */
+        box-sizing: border-box; /* Inclut le padding dans la largeur */
+    }
+}
+
+/* ===================================================== */
+/* PERSONNALISATION DE LA NAVBAR BOOTSTRAP               */
+/* On garde ton look d'origine (gras, gris, bleu survol) */
+/* en surchargeant le style par défaut de Bootstrap.     */
+/* ===================================================== */
+
+/* Le titre CIMEN dans la navbar : on enlève la marge du <h1> */
+.navbar-brand h1 {
+    margin: 0; /* Supprime l'espace par défaut autour du titre */
+}
+
+/* Les liens du menu : on reprend ton style d'origine */
+.navbar-nav .nav-link {
+    color: #333; /* Couleur grise comme avant */
+    font-weight: bold; /* Texte en gras comme avant */
+}
+
+/* Couleur bleue au survol, comme dans ton CSS d'origine */
+.navbar-nav .nav-link:hover {
+    color: #007BFF; /* Bleu au survol */
 }
