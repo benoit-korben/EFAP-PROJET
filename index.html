@@ -1,30 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr"> <!-- Langue définie en français pour correspondre aux commentaires et au public cible -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8"> <!-- Encodage des caractères pour supporter les accents et symboles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adaptation pour mobile -->
+    <title>Mon Portfolio - CIMEN</title> <!-- Titre de la page -->
+    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS externe -->
 </head>
 <body>
-  <div class="header container">
-    <h1>CIMEN</h1>
-    <div class="menu">
-      <h2>Mon travail</h2>
-      <h2>Demande de RDV</h2>
-      <h2>A propos</h2>
-      <a href="https://benoit-korben.github.io/EFAP-PROJET/index2.html"><h2>my second web page</h2></a>
-    </div>
-  </div>
-  <hr>
-  <div class="container">
-    <img src="images/flowers.jpg" alt="pictures of flowers with a grey background" class="full_width">
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid corporis dolor eligendi consequatur optio quod officia ducimus totam nisi quasi? Delectus impedit dolorum iste, et dolores ea veritatis unde blanditiis!</p>
-  </div>
-  <div class="gallery">
-    <img src="images/Cactus-rotin-naturel.jpg" alt="cactus en rotin">
-    <img src="images/cactus_scultpure" alt="sculpture of a cactus">
-  </div>
-  
+    <!-- En-tête de la page -->
+    <header class="header container">
+        <h1>CIMEN</h1> <!-- Titre principal -->
+        <nav class="menu"> <!-- Utilisation de la balise <nav> pour le menu de navigation -->
+            <h2><a href="#travail">Mon travail</a></h2> <!-- Lien vers la section "Mon travail" -->
+            <h2><a href="#contact">Demande de renseignement</a></h2> <!-- Lien vers la section "Contact" -->
+            <h2><a href="#apropos">À propos</a></h2> <!-- Lien vers la section "À propos" -->
+        </nav>
+    </header>
+
+    <hr> <!-- Ligne horizontale pour séparer les sections -->
+
+    <!-- Section principale avec image et texte -->
+    <main class="container">
+        <img src="images/flowers.jpg" alt="Photo de fleurs sur fond gris" class="full_width"> <!-- Image pleine largeur -->
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid corporis dolor eligendi consequatur optio quod officia ducimus totam nisi quasi? Delectus impedit dolorum iste, et dolores ea veritatis unde blanditiis!</p>
+    </main>
+
+    <!-- Galerie d'images -->
+    <section class="gallery">
+        <img src="images/Cactus-rotin-naturel.jpg" alt="Cactus en rotin naturel"> <!-- Image avec description alternative -->
+        <img src="images/cactus_scultpure.jpg" alt="Sculpture de cactus"> <!-- Correction du nom du fichier (ajout de l'extension .jpg) -->
+    </section>
+
+    <!-- Section du formulaire de contact -->
+    <section id="contact" class="contact container">
+        <h2>Contactez-moi</h2> <!-- Titre de la section -->
+        <form action="#" method="post"> <!-- Formulaire avec méthode POST (à adapter selon ton backend) -->
+            <!-- Champ pour le nom -->
+            <div class="form-group">
+                <label for="nom">Nom :</label> <!-- Étiquette pour le champ "Nom" -->
+                <input type="text" id="nom" name="nom" required> <!-- Champ texte obligatoire -->
+            </div>
+
+            <!-- Champ pour le prénom -->
+            <div class="form-group">
+                <label for="prenom">Prénom :</label> <!-- Étiquette pour le champ "Prénom" -->
+                <input type="text" id="prenom" name="prenom" required> <!-- Champ texte obligatoire -->
+            </div>
+
+            <!-- Champ pour l'email -->
+            <div class="form-group">
+                <label for="email">Email :</label> <!-- Étiquette pour le champ "Email" -->
+                <input type="email" id="email" name="email" required> <!-- Champ email obligatoire -->
+            </div>
+
+            <!-- Champ pour le numéro de téléphone -->
+            <div class="form-group">
+                <label for="telephone">Numéro de téléphone :</label> <!-- Étiquette pour le champ "Téléphone" -->
+                <input type="tel" id="telephone" name="telephone"> <!-- Champ téléphone (non obligatoire) -->
+            </div>
+
+            <!-- Bouton de soumission -->
+            <button type="submit" class="bouton-submit">Envoyer</button> <!-- Bouton pour soumettre le formulaire -->
+        </form>
+    </section>
 </body>
 </html>

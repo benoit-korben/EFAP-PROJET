@@ -19,3 +19,140 @@
   width: 100%;
   object-fit: cover;
 }
+
+/* Réinitialisation des marges et padding par défaut pour une meilleure cohérence */
+body, h1, h2, p, nav, section, form, div {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style global du corps de la page */
+body {
+    font-family: Arial, sans-serif; /* Police par défaut */
+    line-height: 1.6; /* Espacement entre les lignes */
+    color: #333; /* Couleur du texte */
+    background-color: #f9f9f9; /* Couleur de fond claire */
+}
+
+/* Style des conteneurs (utilisés pour centrer le contenu) */
+.container {
+    width: 90%; /* Largeur relative pour s'adapter aux petits écrans */
+    max-width: 1200px; /* Largeur maximale pour les grands écrans */
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    padding: 20px; /* Espacement intérieur */
+}
+
+/* Style de l'en-tête */
+.header {
+    display: flex; /* Utilisation de Flexbox pour aligner les éléments horizontalement */
+    justify-content: space-between; /* Espace entre le titre et le menu */
+    align-items: center; /* Alignement vertical au centre */
+    padding: 20px 0; /* Espacement vertical */
+}
+
+/* Style du menu de navigation */
+.menu {
+    display: flex; /* Alignement horizontal des éléments du menu */
+    gap: 30px; /* Espace entre chaque élément du menu */
+}
+
+/* Style des liens dans le menu */
+.menu a {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: #333; /* Couleur des liens */
+    font-weight: bold; /* Texte en gras */
+}
+
+/* Style des liens au survol */
+.menu a:hover {
+    color: #007BFF; /* Couleur bleue au survol */
+}
+
+/* Style des lignes horizontales */
+hr {
+    border: none; /* Supprime la bordure par défaut */
+    height: 1px; /* Hauteur de la ligne */
+    background-color: #ddd; /* Couleur de la ligne */
+    margin: 20px 0; /* Espacement vertical autour de la ligne */
+}
+
+/* Style des images en pleine largeur */
+.full_width {
+    width: 100%; /* Largeur à 100% du conteneur parent */
+    height: auto; /* Hauteur automatique pour conserver les proportions */
+    margin-bottom: 20px; /* Espacement sous l'image */
+}
+
+/* Style de la galerie */
+.gallery {
+    display: flex; /* Alignement horizontal des images */
+    gap: 20px; /* Espace entre les images */
+    justify-content: center; /* Centre les images horizontalement */
+    padding: 20px 0; /* Espacement vertical */
+}
+
+/* Style des images dans la galerie */
+.gallery img {
+    width: 300px; /* Largeur fixe pour les images de la galerie */
+    height: auto; /* Hauteur automatique */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet 3D */
+}
+
+/* Style de la section de contact */
+.contact {
+    padding: 40px 0; /* Espacement vertical */
+    background-color: #fff; /* Fond blanc pour la section */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    margin-top: 40px; /* Espacement au-dessus de la section */
+}
+
+/* Style du titre de la section de contact */
+.contact h2 {
+    text-align: center; /* Centre le titre */
+    margin-bottom: 20px; /* Espacement sous le titre */
+    color: #007BFF; /* Couleur bleue pour le titre */
+}
+
+/* Style des groupes de champs du formulaire */
+.form-group {
+    margin-bottom: 15px; /* Espacement sous chaque groupe de champs */
+    padding: 20px;
+  }
+
+/* Style des étiquettes (labels) du formulaire */
+.form-group label {
+    display: block; /* Affiche le label comme un bloc (pour qu'il prenne toute la largeur) */
+    margin-bottom: 5px; /* Espacement sous le label */
+    font-weight: bold; /* Texte en gras */
+}
+
+/* Style des champs de saisie du formulaire */
+.form-group input {
+    width: 95%; /* Largeur à 100% du conteneur parent */
+    padding: 10px; /* Espacement intérieur */
+    border: 1px solid #ddd; /* Bordure légère */
+    border-radius: 4px; /* Coins arrondis */
+    font-size: 16px; /* Taille de la police */
+}
+
+/* Style du bouton de soumission */
+.bouton-submit {
+  margin-left: 20px;
+    display: block; /* Affiche le bouton comme un bloc (pour qu'il prenne toute la largeur) */
+    width: 95%; /* Largeur à 100% */
+    padding: 12px; /* Espacement intérieur */
+    background-color: #007BFF; /* Couleur de fond bleue */
+    color: #fff; /* Couleur du texte en blanc */
+    border: none; /* Supprime la bordure par défaut */
+    border-radius: 4px; /* Coins arrondis */
+    font-size: 16px; /* Taille de la police */
+    cursor: pointer; /* Curseur en forme de main au survol */
+    margin-top: 20px; /* Espacement au-dessus du bouton */
+}
+
+/* Style du bouton au survol */
+.bouton-submit:hover {
+    background-color: #0056b3; /* Couleur de fond plus foncée au survol */
+}
